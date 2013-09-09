@@ -1,0 +1,14 @@
+{
+    "name": "Encrypted File Vault",
+    "description": "Storing your data securely in various cloud services (such as Dropbox) using adrenaline.io's advanced encryption/key management system",
+    "version": "0.0.0.1",
+    "app": {
+        "background" : {
+            "scripts": ["js/background.js"]
+        }
+    },
+    "icons": {
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    }
+}
