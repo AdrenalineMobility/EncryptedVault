@@ -56,11 +56,31 @@ $("#signout").click(function() {
 });
 
 $("#upload").click(function() {
-    client.writeFile("hello_world.txt", "Hello, world!\n", function(error, stat) {
-        if (error) {
-            return console.log(error);  // Something went wrong.
-        }
-
-        console.log("File saved as revision " + stat.revisionTag);
-    });
 });
+
+function upload(file) {
+    var reader = new FileReader();
+
+    reader.onload = function(evt) {
+        var content = evt.target.result;
+        console.log(content);
+
+        client.writeFile("encrypted.txt", content, function(error, stat) {
+            if (error) {
+                return console.log(error);  // Something went wrong.
+            }
+            console.log("File saved as revision " + stat.revisionTag);
+        });
+    };
+
+    reader.readAsBinaryString(file);
+}
+
+function download(ccb) {
+    client.readFile("encrypted.txt", function(error, data) {
+        if (error) {
+            return console.log(error);
+        }
+        ccb(data);
+    });
+}
