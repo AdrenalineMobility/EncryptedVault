@@ -31,9 +31,12 @@ function display() {
     download(function(data) {
         $("#content").text(data);
         clearTimeout();
-        $("#content").show();
+        console.log(markdown.toHTML(data));
+        $("#content").html(markdown.toHTML(data));
+        $("#content").addClass("show-border");
         setTimeout(function() {
-            $("#content").hide();
+            $("#content").html("");
+            $("#content").removeClass("show-border");
         }, 5000);
     });
 }

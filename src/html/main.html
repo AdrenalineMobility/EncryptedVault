@@ -7,22 +7,31 @@
     body, html {
         height: 98%;
     }
+    .show-border {
+        border:10px solid red;
+        border-radius:5px;
+        border
+    }
     </style>
   </head>
   <body>
     <div id="drop_zone" style="width:100%;height:100%">
-      <div>File Vault powered by adrenaline.io</div>
+      <div style="text-align:center"><h3>File Vault - powered by adrenaline.io</h3></div>
       <div>
         <button id="signin">Sign In</button>
         <button id="signout" style="display:none">Sign Out</button>
         <button id="display" style="float:right">Download and Display</button>
       </div>
       <br>
-      <div id="content" style="display:none">
+      <div id="content">
       </div>
+    </div>
+    <div style="position: absolute; bottom: 15px; right: 10px; width: 200px; text-align:right; font-style:italic">
+        Drop a text file to upload
     </div>
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/aes.js"></script>
+    <script type="text/javascript" src="/js/markdown.js"></script>
     <script type="text/javascript" src="/js/common.js"></script>
     <script type="text/javascript" src="/js/dropbox/controller.js"></script>
   </body>
