@@ -1,0 +1,3 @@
+[submodule "submodules/dropbox-js"]
+	path = submodules/dropbox-js
+	url = git://github.com/dropbox/dropbox-js.git

@@ -7,6 +7,11 @@
             "scripts": ["js/background.js"]
         }
     },
+    "permissions": [
+        "storage",
+        "identity",
+        "extension"
+    ],
     "icons": {
         "48": "img/icon48.png",
         "128": "img/icon128.png"
