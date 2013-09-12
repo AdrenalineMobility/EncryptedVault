@@ -39,3 +39,6 @@ function display() {
 }
 
 $("#display").click(display);
+
+
+var key = "hackme";

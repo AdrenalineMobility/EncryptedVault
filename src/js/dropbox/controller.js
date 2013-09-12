@@ -65,6 +65,7 @@ function upload(file) {
         var content = evt.target.result;
         console.log(content);
 
+        content = CryptoJS.AES.encrypt(content, key);
         client.writeFile("encrypted.txt", content, function(error, stat) {
             if (error) {
                 return console.log(error);  // Something went wrong.
@@ -81,6 +82,7 @@ function download(ccb) {
         if (error) {
             return console.log(error);
         }
+        data = CryptoJS.AES.decrypt(data, key).toString(CryptoJS.enc.Utf8);
         ccb(data);
     });
 }
