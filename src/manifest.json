@@ -10,7 +10,6 @@
     "permissions": [
         "storage",
         "identity",
-        "extension"
     ],
     "icons": {
         "48": "img/icon48.png",
